@@ -63,7 +63,7 @@ public class MemberDAO {
     
     public void insertSub1(MemberDTO dto) {
         conn = getConn();
-        String sql = "";
+        String sql = "insert into member_tbl_02_values(?, ?, ?, ?, ?, ?, ?)";
         try {
             
         } catch (Exception e) {
