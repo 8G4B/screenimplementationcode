@@ -22,6 +22,8 @@ dto.setCity(request.getParameter("city"));
 MemberDAO dao = new MemberDAO(); 
 dao.insertSub1(dto);
 
+out.println("<script>location.href='sub1.jsp';</script>");
+
 %>
 
 <!DOCTYPE html>
