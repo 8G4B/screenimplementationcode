@@ -25,14 +25,3 @@ dao.insertSub1(dto);
 out.println("<script>location.href='sub1.jsp';</script>");
 
 %>
-
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-
-</body>
-</html>
