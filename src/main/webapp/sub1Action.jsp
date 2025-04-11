@@ -12,12 +12,12 @@ dao.dbClose();
 request.setCharacterEncoding("utf-8");
 MemberDTO dto = new MemberDTO();
 dto.setCustno(Integer.parseInt(request.getParameter("custno")));
-dto.setCUSTNAME(request.getParameter("custname"));
-dto.setPHONE(request.getParameter("phone"));
-dto.setADDRESS(request.getParameter("address"));
-dto.setJOINDATE(request.getParameter("joindate"));
-dto.setGRADE(request.getParameter("grade"));
-dto.setCITY(request.getParameter("city"));
+dto.setCustname(request.getParameter("custname"));
+dto.setPhone(request.getParameter("phone"));
+dto.setAddress(request.getParameter("address"));
+dto.setJoindate(request.getParameter("joindate"));
+dto.setGrade(request.getParameter("grade"));
+dto.setCity(request.getParameter("city"));
 
 MemberDAO dao = new MemberDAO(); 
 dao.insertSub1(dto);
