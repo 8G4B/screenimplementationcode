@@ -1,0 +1,40 @@
+
+4월 04, 2025 13:37:38.15 NEW SESSION
+4월 04, 2025 13:37:38.16 [23880:12412:0404/133738.153:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 04, 2025 13:37:39.33 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 04, 2025 13:38:07.81 [23880:12412:0404/133807.816:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 04, 2025 13:38:49.48 [23880:12412:0404/133849.488:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 04, 2025 13:40:16.36 [23880:12412:0404/134016.365:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 04, 2025 13:43:48.27 [23880:12412:0404/134348.271:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 04, 2025 13:50:22.64 [23880:12412:0404/135022.647:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 04, 2025 13:58:27.47 [23880:19940:0404/135827.469:ERROR:new_tab_page_handler.cc(1341)] NewTabPage loaded into a non-browser-tab context
+4월 04, 2025 13:58:31.37 [23880:19940:0404/135831.372:ERROR:pref_model_associator.cc(148)] Failed to deserialize value of preference 'sync.demographics': EOF while parsing a value at line 1 column 0
+4월 04, 2025 13:58:31.76 [23880:12412:0404/135831.761:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 04, 2025 13:58:55.60 [23880:12412:0404/135855.603:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 04, 2025 13:59:47.16 [23880:12412:0404/135947.167:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 04, 2025 14:01:30.82 [23880:12412:0404/140130.820:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 04, 2025 14:05:28.39 [23880:12412:0404/140528.391:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 04, 2025 14:12:06.82 [23880:12412:0404/141206.824:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 04, 2025 14:14:11.53 [23880:19940:0404/141411.538:ERROR:CONSOLE(77)] "Uncaught (in promise) TypeError: o.applyStyleSheet is not a function", source: chrome-extension://jmefikbdhgocdjeejjnnepgnfkkbpgjo/devtools.332ed385.js (77)
+4월 04, 2025 14:14:14.51 [23880:19940:0404/141414.514:ERROR:CONSOLE(1)] "Request Extensions.getStorageItems failed. {"code":-32600,"message":"Extension not found."}", source: devtools://devtools/bundled/core/protocol_client/protocol_client.js (1)
+4월 04, 2025 14:14:14.51 [23880:19940:0404/141414.514:ERROR:CONSOLE(1)] "Request Extensions.getStorageItems failed. {"code":-32600,"message":"Extension not found."}", source: devtools://devtools/bundled/core/protocol_client/protocol_client.js (1)
+4월 04, 2025 14:14:14.51 [23880:19940:0404/141414.514:ERROR:CONSOLE(1)] "Request Extensions.getStorageItems failed. {"code":-32600,"message":"Extension not found."}", source: devtools://devtools/bundled/core/protocol_client/protocol_client.js (1)
+4월 04, 2025 14:14:14.51 [23880:19940:0404/141414.514:ERROR:CONSOLE(1)] "Request Extensions.getStorageItems failed. {"code":-32600,"message":"Extension not found."}", source: devtools://devtools/bundled/core/protocol_client/protocol_client.js (1)
+4월 04, 2025 14:14:21.31 [23880:19940:0404/141421.314:ERROR:CONSOLE(1)] "Request Extensions.getStorageItems failed. {"code":-32600,"message":"Extension not found."}", source: devtools://devtools/bundled/core/protocol_client/protocol_client.js (1)
+4월 04, 2025 14:14:21.31 [23880:19940:0404/141421.314:ERROR:CONSOLE(1)] "Request Extensions.getStorageItems failed. {"code":-32600,"message":"Extension not found."}", source: devtools://devtools/bundled/core/protocol_client/protocol_client.js (1)
+4월 04, 2025 14:14:21.31 [23880:19940:0404/141421.314:ERROR:CONSOLE(1)] "Request Extensions.getStorageItems failed. {"code":-32600,"message":"Extension not found."}", source: devtools://devtools/bundled/core/protocol_client/protocol_client.js (1)
+4월 04, 2025 14:14:21.31 [23880:19940:0404/141421.314:ERROR:CONSOLE(1)] "Request Extensions.getStorageItems failed. {"code":-32600,"message":"Extension not found."}", source: devtools://devtools/bundled/core/protocol_client/protocol_client.js (1)
+4월 04, 2025 14:15:04.59 [23880:12412:0404/141504.591:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 04, 2025 14:15:25.96 [23880:12412:0404/141525.961:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 04, 2025 14:16:18.65 [23880:12412:0404/141618.656:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 04, 2025 14:17:46.61 [23880:12412:0404/141746.614:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 04, 2025 14:21:00.76 [23880:12412:0404/142100.767:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 04, 2025 14:26:47.43 [23880:12412:0404/142647.432:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 04, 2025 15:55:59.89 [7656:18752:0404/155559.896:ERROR:pref_model_associator.cc(148)] Failed to deserialize value of preference 'sync.demographics': EOF while parsing a value at line 1 column 0
+4월 04, 2025 15:56:03.75 [7656:19200:0404/155603.754:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 04, 2025 15:56:03.79 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 04, 2025 15:56:25.27 [7656:19200:0404/155625.270:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 04, 2025 15:57:06.81 [7656:19200:0404/155706.811:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 04, 2025 15:58:53.01 [7656:19200:0404/155853.012:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 04, 2025 16:02:29.71 [7656:19200:0404/160229.714:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+4월 04, 2025 16:08:16.61 [7656:19200:0404/160816.614:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT

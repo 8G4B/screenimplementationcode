@@ -1,0 +1,24 @@
+<%@page import="exam.MemberDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+<%--
+	MemberDAO dao = new MemberDAO();
+	dao.getConn();
+	dao.dbClose();
+--%>
+
+<%
+	request.setCharacterEncoding("utf-8")
+%>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Sub1Action</title>
+	</head>
+	<body>
+		
+	</body>
+</html>
