@@ -61,4 +61,17 @@ public class MemberDAO {
         return custno;
     }//getCustno()
     
+    public void insertSub1(MemberDTO dto) {
+        conn = getConn();
+        String sql = "";
+        try {
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("insertSub1() Exception!!!");
+        } finally {
+            dbClose();
+        }
+    }//insertSub1()
+    
 }// class
