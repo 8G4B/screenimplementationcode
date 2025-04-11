@@ -73,6 +73,7 @@ public class MemberDAO {
             ps.setString(5, dto.getJoindate());
             ps.setString(6, dto.getGrade());
             ps.setString(7, dto.getCity());
+            ps.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("insertSub1() Exception!!!");
