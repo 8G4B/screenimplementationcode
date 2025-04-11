@@ -65,7 +65,7 @@ public class MemberDAO {
         conn = getConn();
         String sql = "insert into member_tbl_02_values(?, ?, ?, ?, ?, ?, ?)";
         try {
-            
+            ps = conn.prepareStatement(sql)
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("insertSub1() Exception!!!");
