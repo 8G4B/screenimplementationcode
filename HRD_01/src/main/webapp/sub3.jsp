@@ -12,7 +12,14 @@
 		<section>
 			<div align="center">
 				<h3>회원매출조회</h3>
-			</div>
+				<table border="1">
+					<tr>
+						<th>회원번호</th>
+						<th>회원성명</th>
+						<th>고객등급</th>
+						<th>매출</th>
+					</tr>
+			</div>	
 		</section>
 		<jsp:include page="footer.jsp" />
 	</body>
