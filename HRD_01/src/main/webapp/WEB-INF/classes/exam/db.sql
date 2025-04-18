@@ -51,3 +51,15 @@ INSERT INTO MONEY_TBL_02 VALUES (100003, 20160007, 500, 2, 1000, 'A001', TO_DATE
 INSERT INTO MONEY_TBL_02 VALUES (100004, 20160008, 500, 1, 500, 'A005', TO_DATE('20160104', 'YYYYMMDD'));
 INSERT INTO MONEY_TBL_02 VALUES (100004, 20160009, 600, 1, 600, 'A006', TO_DATE('20160104', 'YYYYMMDD'));
 INSERT INTO MONEY_TBL_02 VALUES (100004, 20160010, 3000, 1, 3000, 'A007', TO_DATE('20160106', 'YYYYMMDD'));
+
+SELECT * FROM MONEY_TBL_02;
+
+-- 회원정보 최대값
+select max(custno) from member_tbl_02;
+
+-- 회원매출조회
+select member.custno, member.custname, member.grade, sum(money.price) as total 
+from member_tbl_02 member, money_tbl_02 money 
+where member.custno = money.custno 
+group by member.custno, member.custname, member.grade 
+order by total desc;
