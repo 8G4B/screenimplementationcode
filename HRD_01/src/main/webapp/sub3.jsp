@@ -21,7 +21,7 @@
 					</tr>
 					<%
 						for (TotalDTO dto : list) {
-							<tr>
+							<tr align="center">
 								<td><%= dto.getCustno() %></td>
 								<td><%= dto.getCustname() %></td>
 								<td><%= dto.getGrade() %></td>
