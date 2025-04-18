@@ -1,38 +1,38 @@
 package exam;
 
 public class TotalDTO {
-  int custno, total;
-  String custname, grade;
+	private int custno, total;
+	private String custname, grade;
 
-  public int getCustno() {
-    return custno;
-  }
+	public int getCustno() {
+		return custno;
+	}
 
-  public void setCustno(int custno) {
-    this.custno = custno;
-  } 
+	public void setCustno(int custno) {
+		this.custno = custno;
+	}
 
-  public String getCustname() {
-    return custname;
-  }
+	public int getTotal() {
+		return total;
+	}
 
-  public void setCustname(String custname) {
-    this.custname = custname;
-  }
+	public void setTotal(int total) {
+		this.total = total;
+	}
 
-  public String getGrade() {
-    return grade;
-  }
-  
-  public void setGrade(String grade) {
-    this.grade = grade;
-  }
+	public String getCustname() {
+		return custname;
+	}
 
-  public int getTotal() {
-    return total;
-  }
+	public void setCustname(String custname) {
+		this.custname = custname;
+	}
 
-  public void setTotal(int total) {
-    this.total = total;
-  }
+	public String getGrade() {
+		return grade;
+	}
+
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
 }
