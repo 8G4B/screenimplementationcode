@@ -140,7 +140,15 @@ public class MemberDAO {
 				TotalDTO dto = new TotalDTO();
 				dto.setCustno(rs.getInt(1));
 				dto.setCustname(rs.getString(2));
-				dto.setGrade(rs.getString(3));
+				String grade = rs.getString(3);
+				if (grade.equals("A")) {
+					grade = "VIP";
+				} else if (grade.equals("B")) {
+					grade = "일반";
+				} else if (grade.equals("C")) {
+					grade = "직원";
+				}
+				dto.setGrade(grade);
 				dto.setTotal(rs.getInt(4));
 				list.add(dto);
 			}
