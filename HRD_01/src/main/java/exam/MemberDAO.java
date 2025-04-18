@@ -126,4 +126,31 @@ public class MemberDAO {
 
 		return list;
 	}
+
+	public List<TotalDTO> selectSub3() {
+		conn = getConn();
+		String sql = "select member.custno, member.custname, member.grade, sum(money.price) as total from member_tbl_02 member, money_tbl_02 money where member.custno = money.custno group by member.custno, member.custname, member.grade order by total desc;";
+		List<TotalDTO> list = new ArrayList<TotalDTO>();
+
+		try {
+			ps = conn.prepareStatement(sql);
+			rs = ps.executeQuery();
+
+			while (rs.next()) {
+				TotalDTO dto = new TotalDTO();
+				dto.setCustno(rs.getInt(1));
+				dto.setCustname(rs.getString(2));
+				dto.setGrade(rs.getString(3));
+				dto.setTotal(rs.getInt(4));
+				list.add(dto);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("selectSub3() Exception");
+		} finally {
+			dbClose();
+		}
+
+		return list;
+	}
 }
