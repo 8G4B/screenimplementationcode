@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -92,28 +93,31 @@ public class MemberDAO {
 		conn = getConn();
 		String sql = "SELECT * FROM MEMBER_TBL_02 ORDER BY CUSTNO ASC";
 		List<MemberDTO> list = new ArrayList<MemberDTO>();
+
 		try {
 			ps = conn.prepareStatement(sql);
 			rs = ps.executeQuery();
-			
+
 			while (rs.next()) {
 				MemberDTO dto = new MemberDTO();
 				dto.setCustno(rs.getInt(1));
 				dto.setCustname(rs.getString(2));
 				dto.setPhone(rs.getString(3));
 				dto.setAddress(rs.getString(4));
-				
 				dto.setJoindate(rs.getString(5).substring(0, 10));
 
 				String grade = rs.getString(6);
-				if (grade.equals("A")) {
+
+				if (grade.equalsIgnoreCase("A")) {
 					grade = "VIP";
-				} else if (grade.equals("B")) {
+				} else if (grade.equalsIgnoreCase("B")) {
 					grade = "일반";
-				} else if (grade.equals("C")) {
+				} else if (grade.equalsIgnoreCase("C")) {
 					grade = "직원";
 				}
+
 				dto.setGrade(grade);
+
 				dto.setCity(rs.getString(7));
 				list.add(dto);
 			}
@@ -129,26 +133,35 @@ public class MemberDAO {
 
 	public List<TotalDTO> selectSub3() {
 		conn = getConn();
-		String sql = "select member.custno, member.custname, member.grade, sum(money.price) as total from member_tbl_02 member, money_tbl_02 money where member.custno = money.custno group by member.custno, member.custname, member.grade order by total desc;";
+		String sql = "select member.custno, member.custname, ";
+		sql += "member.grade, sum(money.price) as total ";
+		sql += "from member_tbl_02 member, money_tbl_02 money ";
+		sql += "where member.custno = money.custno ";
+		sql += "group by member.custno, member.custname, member.grade ";
+		sql += "order by total desc";
 		List<TotalDTO> list = new ArrayList<TotalDTO>();
 
 		try {
 			ps = conn.prepareStatement(sql);
-			rs = ps.executeQuery();
-
-			while (rs.next()) {
+			rs= ps.executeQuery();
+			
+			while(rs.next()) {
 				TotalDTO dto = new TotalDTO();
 				dto.setCustno(rs.getInt(1));
 				dto.setCustname(rs.getString(2));
+				
 				String grade = rs.getString(3);
-				if (grade.equals("A")) {
+
+				if (grade.equalsIgnoreCase("A")) {
 					grade = "VIP";
-				} else if (grade.equals("B")) {
+				} else if (grade.equalsIgnoreCase("B")) {
 					grade = "일반";
-				} else if (grade.equals("C")) {
+				} else if (grade.equalsIgnoreCase("C")) {
 					grade = "직원";
 				}
+				
 				dto.setGrade(grade);
+				
 				dto.setTotal(rs.getInt(4));
 				list.add(dto);
 			}
@@ -158,7 +171,7 @@ public class MemberDAO {
 		} finally {
 			dbClose();
 		}
-
 		return list;
+
 	}
 }

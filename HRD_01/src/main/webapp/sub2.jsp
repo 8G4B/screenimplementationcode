@@ -31,7 +31,7 @@
 						<th>고객등급</th>
 						<th>거주지역</th>
 					</tr>
-					<%for(MemberDTO dto: list) {%>
+					<% for(MemberDTO dto: list) { %>
 						<tr align="center">
 							<td><%= dto.getCustno() %></td>
 							<td><%= dto.getCustname() %></td>
@@ -41,7 +41,7 @@
 							<td><%= dto.getGrade() %></td>
 							<td><%= dto.getCity() %></td>
 						</tr>
-					<%}%>
+					<% } %>
 				</table>
 			</div>
 		</section>
