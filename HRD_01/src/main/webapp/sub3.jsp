@@ -19,6 +19,17 @@
 						<th>고객등급</th>
 						<th>매출</th>
 					</tr>
+					<%
+						for (TotalDTO dto : list) {
+							<tr>
+								<td><%= dto.getCustno() %></td>
+								<td><%= dto.getCustname() %></td>
+								<td><%= dto.getGrade() %></td>
+								<td><%= dto.getTotal() %></td>
+							</tr>
+						}
+					%>
+				</table>
 			</div>	
 		</section>
 		<jsp:include page="footer.jsp" />
