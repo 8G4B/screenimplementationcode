@@ -1,0 +1,8 @@
+.metadata/
+.vscode/
+.idea/
+.DS_Store
+.classpath
+.project
+.settings
+.dist
