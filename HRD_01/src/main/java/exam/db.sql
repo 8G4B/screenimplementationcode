@@ -62,4 +62,4 @@ select member.custno, member.custname, member.grade, sum(money.price) as total
 from member_tbl_02 member, money_tbl_02 money 
 where member.custno = money.custno 
 group by member.custno, member.custname, member.grade 
-order by total des  c;
+order by total desc;
