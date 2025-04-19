@@ -58,7 +58,7 @@ SELECT * FROM MONEY_TBL_02;
 select max(custno) from member_tbl_02;
 
 -- 회원매출조회
-select member.custno, member.custname, member.grade, sum(money.price) as total 
+select member.custno, member.custname, member.grade, sum(money.price), as total 
 from member_tbl_02 member, money_tbl_02 money 
 where member.custno = money.custno 
 group by member.custno, member.custname, member.grade 

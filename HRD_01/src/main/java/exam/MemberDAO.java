@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -129,35 +130,37 @@ public class MemberDAO {
 
 	public List<TotalDTO> selectSub3() {
 		conn = getConn();
-		String sql = "select member.custno, member.custname, member.grade, sum(money.price) as total from member_tbl_02 member, money_tbl_02 money where member.custno = money.custno group by member.custno, member.custname, member.grade order by total desc;";
+		String sql = "select member.custno, member.custname, member.grade, sum(money.price) as total from member_tbl_02 member, money_tbl_02 money where member.custno = money.custno group by member.custno, member.custname, member.grade order by total desc";
 		List<TotalDTO> list = new ArrayList<TotalDTO>();
 
 		try {
-			ps = conn.prepareStatement(sql);
-			rs = ps.executeQuery();
+            ps = conn.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while(rs.next()) {
+                TotalDTO dto = new TotalDTO();
+                dto.setCustno(rs.getInt(1));
+                dto.setCustname(rs.getString(2));
 
-			while (rs.next()) {
-				TotalDTO dto = new TotalDTO();
-				dto.setCustno(rs.getInt(1));
-				dto.setCustname(rs.getString(2));
-				String grade = rs.getString(3);
-				if (grade.equals("A")) {
-					grade = "VIP";
-				} else if (grade.equals("B")) {
-					grade = "일반";
-				} else if (grade.equals("C")) {
-					grade = "직원";
-				}
-				dto.setGrade(grade);
-				dto.setTotal(rs.getInt(4));
-				list.add(dto);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("selectSub3() Exception");
-		} finally {
-			dbClose();
-		}
+                String grade = rs.getString(3);
+                if (grade.equalsIgnoreCase("A")) {
+                    grade = "VIP";
+                } else if (grade.equalsIgnoreCase("B")) {
+                    grade = "일반";
+                } else if (grade.equalsIgnoreCase("C")) {
+                    grade = "직원";
+                }
+                dto.setGrade(grade);
+
+                dto.setTotal(rs.getInt(4));
+
+                list.add(dto);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("selectSub3() Exception!!!");
+        }finally {
+            dbClose();
+        }
 
 		return list;
 	}
