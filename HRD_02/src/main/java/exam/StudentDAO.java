@@ -19,11 +19,24 @@ public class StudentDAO {
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
 			conn = DriverManager.getConnection(url, user, password);
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("getConn() Exception");
 		}
 	}
+	
+	public void dbClose() {
+		try {
+			if(rs != null) rs.close();
+			if(ps != null) ps.close();
+			if(conn != null) conn.close();
+			System.out.println("DB 접속 해제");
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("dbClose e");
+		}
+	}
+	
+	
 	
 }

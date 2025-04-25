@@ -1,5 +1,10 @@
+<%@ page import="exam.StudentDAO" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+StudentDAO dao = new StudentDAO();
+
+%>
 <!DOCTYPE html>
 <html>
 <head>
