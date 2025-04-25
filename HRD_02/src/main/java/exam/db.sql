@@ -1,27 +1,62 @@
-create table tbl_student_202210(
-	stuid char(8) not null,
-	sname varchar2(20),
-	deptname varchar2(20),
-	jumin char(13),
-	phone char(13),
-	email char(30),
-	primary key(stuid)
+-- 학생 테이블 생성
+CREATE TABLE TBL_STUDENT_202210(
+    stuid CHAR(8) NOT NULL,
+    sname VARCHAR2(20),
+    deptname VARCHAR2(20),
+    jumin CHAR(13),
+    phone CHAR(13),
+    email CHAR(30),
+    PRIMARY KEY(stuid)
 );
 
+-- 학생 테이블 제거
+DROP TABLE TBL_STUDENT_202210;
 
-insert into tbl_student_202210 values('20220011', '김한국', '사회복지학과', '0301013111111', '010-1111-1111', 'hankuk@naver.com');
-insert into tbl_student_202210 values('20220012', '홍길동', '관광과', '0202013222222', '010-2222-2222', 'hongkil@naver.com');
-insert into tbl_student_202210 values('20220013', '김미자', '패션디자인과', '0203014333333', '010-3333-3333', 'kimja@naver.com');
-insert into tbl_student_202210 values('20220014', '윤한얼', '물리치료과', '0204014444444', '010-4444-4444', 'yoon@naver.com');
-insert into tbl_student_202210 values('20220015', '김성진', '모던음악과', '0205013555555', '010-5555-5555', 'kimsj@naver.com');
-insert into tbl_student_202210 values('20220016', '조민지', '건축과', '0206014666666', '010-6666-6666', 'jmg@naver.com');
+-- 학생 테이블 샘플데이터 입력
+INSERT INTO TBL_STUDENT_202210 VALUES('20220011','김한국','사회복지학과','0301013111111','010-1111-1111','hankuk@naver.com');
+INSERT INTO TBL_STUDENT_202210 VALUES('20220012','홍길동','관광과','0202013222222','010-2222-2222','hongkil@naver.com');
+INSERT INTO TBL_STUDENT_202210 VALUES('20220013','김미자','패션디자인과','0203014333333','010-3333-3333','kimja@naver.com');
+INSERT INTO TBL_STUDENT_202210 VALUES('20220014','윤한얼','물리치료과','0204013444444','010-4444-4444','yoon@naver.com');
+INSERT INTO TBL_STUDENT_202210 VALUES('20220015','김성진','모던음악과','0205013555555','010-5555-5555','kimsj@naver.com');
+INSERT INTO TBL_STUDENT_202210 VALUES('20220016','조민지','건축과','0206014666666','010-6666-6666','jmg@naver.com');
 
-create table tbl_score_202210(
-	stuid char(8) not null,
-	subcode char(8),
-	midscore number(),
-	finalscore number(),
-	attend number(),
-	report number(),
-	etc number(),
-)
+-- 커밋
+COMMIT;
+
+-- 점수 테이블 생성
+CREATE TABLE TBL_SCORE_202210(
+    stuid CHAR(8) NOT NULL,
+    subcode CHAR(4),
+    midscore NUMBER,
+    finalscore NUMBER,
+    attend NUMBER,
+    report NUMBER,
+    etc NUMBER,
+    PRIMARY KEY(stuid)
+);
+
+-- 점수 테이블 샘플데이터 입력
+INSERT INTO TBL_SCORE_202210 VALUES('20220011','A001',80,90,100,100,100);
+INSERT INTO TBL_SCORE_202210 VALUES('20220012','A001',85,90,90,90,80);
+INSERT INTO TBL_SCORE_202210 VALUES('20220013','A001',75,90,80,77,80);
+INSERT INTO TBL_SCORE_202210 VALUES('20220014','A001',90,90,100,100,70);
+INSERT INTO TBL_SCORE_202210 VALUES('20220015','A002',70,70,80,80,90);
+INSERT INTO TBL_SCORE_202210 VALUES('20220016','A002',96,95,100,100,90);
+
+COMMIT;
+
+-- 과목 테이블 생성
+CREATE TABLE TBL_SUBJECT_202210(
+    subcode CHAR(4) NOT NULL,
+    subname VARCHAR2(30),
+    proname VARCHAR2(20)
+);
+
+-- 과목 테이블 샘플데이터 입력
+INSERT INTO TBL_SUBJECT_202210 VALUES('A001','자바','정명석');
+INSERT INTO TBL_SUBJECT_202210 VALUES('A002','C언어','김미숙');
+INSERT INTO TBL_SUBJECT_202210 VALUES('A003','데이터베이스','서길동');
+INSERT INTO TBL_SUBJECT_202210 VALUES('A004','웹프로그래밍','이건원');
+INSERT INTO TBL_SUBJECT_202210 VALUES('A005','영어','박태민');
+
+COMMIT;
