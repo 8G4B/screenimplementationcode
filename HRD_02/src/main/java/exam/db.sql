@@ -49,7 +49,7 @@ COMMIT;
 CREATE TABLE TBL_SUBJECT_202210(
     subcode CHAR(4) NOT NULL,
     subname VARCHAR2(30),
-    proname VARCHAR2(20)
+    proname VARCHAR2(20), PRIMARY KEY(subcode)
 );
 
 -- 과목 테이블 샘플데이터 입력
