@@ -15,7 +15,7 @@ public class StudentDAO {
 	public Connection getConn() {
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
 		String user = "system";
-		String password = "123456";
+		String password = "1234";
 		
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
