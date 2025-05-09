@@ -1,0 +1,28 @@
+<%@page import="exam.ScoreDTO"%>
+<%@page import="java.util.List"%>
+<%@page import="exam.StudentDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+StudentDAO dao = new StudentDAO();
+List<ScoreDTO> list=dao.selectSub3();
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sub3</title>
+</head>
+<body>
+	<jsp:include page="header.jsp" />
+	<jsp:include page="nav.jsp" />
+
+	<section>
+		<div align="center">
+			<h3>성적현황</h3>
+		</div>
+	</section>
+
+	<jsp:include page="footer.jsp" />
+</body>
+</html>
