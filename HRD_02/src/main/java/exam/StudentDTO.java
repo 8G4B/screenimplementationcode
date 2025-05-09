@@ -1,7 +1,7 @@
 package exam;
 
 public class StudentDTO {
-	private String stuid,sname,deptname,jumin,phone,email, gender;
+	private String stuid,sname,deptname,jumin,phone,email,gender;
 
 	public String getStuid() {
 		return stuid;
@@ -58,6 +58,4 @@ public class StudentDTO {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	
-	
-}//class
+}

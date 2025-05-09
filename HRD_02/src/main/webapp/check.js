@@ -1,5 +1,9 @@
-//과목별 성적조회(sub4.jsp) 유효성 검사
 function fnSub4FormCheck(){
-	var searchSubcode = document.sub4Form.searchSubcode.value;
-	
-}//fnSub4formCheck()
+	var searchSubCode = document.sub4Form.searchSubcode.value;
+	if(fnSub4FormCheck === "" || searchSubCode.trim().length === 0){
+		alert("과목코드가 입력되지 않았습니다!");
+		document.sub4Form.searchSubcode.focus();
+		return false;
+	}
+	document.sub4Form.submit();	
+}

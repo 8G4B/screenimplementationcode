@@ -82,7 +82,4 @@ public class ScoreDTO {
 	public void setTotal(double total) {
 		this.total = total;
 	}
-	
-	
-	
-}//class
+}

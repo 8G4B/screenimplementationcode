@@ -1,12 +1,12 @@
 -- 학생 테이블 생성
 CREATE TABLE TBL_STUDENT_202210(
-    stuid CHAR(8) NOT NULL,
-    sname VARCHAR2(20),
-    deptname VARCHAR2(20),
-    jumin CHAR(13),
-    phone CHAR(13),
-    email CHAR(30),
-    PRIMARY KEY(stuid)
+	stuid CHAR(8) NOT NULL,
+	sname VARCHAR2(20),
+	deptname VARCHAR2(20),
+	jumin CHAR(13),
+	phone CHAR(13),
+	email CHAR(30),
+	PRIMARY KEY(stuid)
 );
 
 -- 학생 테이블 제거
@@ -25,14 +25,14 @@ COMMIT;
 
 -- 점수 테이블 생성
 CREATE TABLE TBL_SCORE_202210(
-    stuid CHAR(8) NOT NULL,
-    subcode CHAR(4),
-    midscore NUMBER,
-    finalscore NUMBER,
-    attend NUMBER,
-    report NUMBER,
-    etc NUMBER,
-    PRIMARY KEY(stuid)
+	stuid CHAR(8) NOT NULL,
+	subcode CHAR(4),
+	midscore NUMBER,
+	finalscore NUMBER,
+	attend NUMBER,
+	report NUMBER,
+	etc NUMBER,
+	PRIMARY KEY(stuid)
 );
 
 -- 점수 테이블 샘플데이터 입력
@@ -47,10 +47,10 @@ COMMIT;
 
 -- 과목 테이블 생성
 CREATE TABLE TBL_SUBJECT_202210(
-    subcode CHAR(4) NOT NULL,
-    subname VARCHAR2(30),
-    proname VARCHAR2(20),
-    PRIMARY KEY(subcode)
+	subcode CHAR(4) NOT NULL,
+	subname VARCHAR2(30),
+	proname VARCHAR2(20),
+	PRIMARY KEY(subcode)
 );
 
 -- 과목 테이블 샘플데이터 입력
@@ -61,8 +61,25 @@ INSERT INTO TBL_SUBJECT_202210 VALUES('A004','웹프로그래밍','이건원');
 INSERT INTO TBL_SUBJECT_202210 VALUES('A005','영어','박태민');
 
 COMMIT;
+
+-- 샘플데이터 조회
+SELECT * FROM TBL_SUBJECT_202210;
+
+-- 잔체 학생현황 조회
+SELECT * FROM TBL_STUDENT_202210 ORDER BY stuid ASC;
+
+-- 성적현황 조회
+SELECT student.stuid, student.sname, 
+	subject.subname, subject.subcode, subject.proname, 
+	score.midscore, score.finalscore, score.attend, score.report, score.etc 
+FROM TBL_STUDENT_202210 student, TBL_SCORE_202210 score, TBL_SUBJECT_202210 subject
+WHERE student.stuid = score.stuid AND score.subcode = subject.subcode
+ORDER BY student.sname ASC;
+
 --성적현황 조회
-SELECT student.stuid, student.sname, subject.subname, subject.subcode, subject.proname, score.midscore, score.finalscore, score.attend, score.report, score.etc 
-FROM TBL_STUDENT_202210 student, TBL_SCORE_202210 score, TBL_SUBJECT_202210 subject 
-where  student.stuid = score.stuid and subject.subcode = score.subcode 
-order by student.sname asc;
+SELECT
+FROM
+WHERE
+GROUP BY
+HAVING
+ORDER BY

@@ -1,8 +1,8 @@
 <%@page import="exam.StudentDTO"%>
 <%@page import="java.util.List"%>
-<%@ page import="exam.StudentDAO"%>
+<%@ page import="exam.StudentDAO" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <%
 StudentDAO dao = new StudentDAO();
 List<StudentDTO> list = dao.selectSub1();
@@ -29,23 +29,18 @@ List<StudentDTO> list = dao.selectSub1();
 					<th>전화번호</th>
 					<th>이메일</th>
 				</tr>
-
-				<%
-				for (StudentDTO dto : list) {
-				%>
-				<tr align="center">
-					<td><%=dto.getStuid()%></td>
-					<td><%=dto.getSname()%></td>
-					<td><%=dto.getJumin()%></td>
-					<td><%=dto.getDeptname()%></td>
-					<td><%=dto.getGender()%></td>
-					<td><%=dto.getPhone()%></td>
-					<td><%=dto.getEmail()%></td>
-				</tr>
-
-				<%
-				}
-				%>
+				
+				<% for(StudentDTO dto : list) { %>
+					<tr align="center">
+						<td><%= dto.getStuid() %></td>
+						<td><%= dto.getSname() %></td>
+						<td><%= dto.getJumin() %></td>
+						<td><%= dto.getDeptname() %></td>
+						<td><%= dto.getGender() %></td>
+						<td><%= dto.getPhone() %>
+						<td><%= dto.getEmail() %></td>
+					</tr>
+				<% } %>
 			</table>
 		</div>
 	</section>

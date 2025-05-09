@@ -6,16 +6,14 @@
 <meta charset="UTF-8">
 <title>Sub2</title>
 </head>
-<body>
+<body style="padding: 0; margin: 0">
 	<jsp:include page="header.jsp"/>
 	<jsp:include page="nav.jsp"/>
-	
+	<jsp:include page="footer.jsp"/>
 	<section>
 		<div align="center">
 			<h3>성적입력</h3>
 		</div>
 	</section>
-	
-	<jsp:include page="footer.jsp"/>
 </body>
 </html>
